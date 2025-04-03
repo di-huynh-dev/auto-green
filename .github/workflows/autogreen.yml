@@ -1,14 +1,8 @@
 name: Auto-Green
 
 on:
-  workflow_dispatch:
-    inputs:
-      log:
-        description: "Commit Log"
-        required: true
-        default: "a commit a day keeps your girlfriend away"
   schedule:
-    - cron: "0 10 * * 0-6"
+    - cron: "4 10 * * 0-6" # This will run every day at 17:00 Vietnam time (ICT)
 
 jobs:
   autogreen:
